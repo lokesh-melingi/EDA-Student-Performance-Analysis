@@ -1,162 +1,79 @@
-📊 Exploratory Data Analysis for Discovering Patterns and Insights
+# Exploratory Data Analysis — Student Performance
 
-Overview
+A college-level EDA project that explores patterns and insights in a Student Performance dataset using Python and an interactive React dashboard.
 
-This project presents a comprehensive Exploratory Data Analysis (EDA) of a Student Performance Dataset. It demonstrates how statistical analysis and data visualization techniques can be used to uncover meaningful patterns, relationships, and insights that influence student academic performance.
+![Tech](https://img.shields.io/badge/Python-3.11-blue) ![Pandas](https://img.shields.io/badge/Pandas-2.x-150458) ![React](https://img.shields.io/badge/React-19-61DAFB) ![Tailwind](https://img.shields.io/badge/Tailwind-4-38BDF8)
 
-The project includes an interactive dashboard, a detailed EDA report, a Jupyter Notebook, and the dataset used for analysis.
+## Project Title
+**Exploratory Data Analysis for Discovering Patterns and Insights**
 
----
+## Objective
+Identify the strongest drivers of student final exam scores using statistical and visual analysis.
 
-🎯 Objective
+## Problem Statement
+Educators lack a clear, data-driven view of which student habits (study time, attendance, sleep, internet usage) most influence academic outcomes.
 
-The main objective of this project is to:
+## Tech Stack
+- **Analysis:** Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook
+- **Dashboard:** React, TanStack Router, Tailwind CSS, Recharts
 
-- Explore and understand the dataset.
-- Perform data cleaning and preprocessing.
-- Analyze statistical characteristics of the data.
-- Visualize trends, distributions, and relationships.
-- Identify key factors affecting student performance.
-- Generate meaningful insights and recommendations.
-
----
-
-🛠️ Technologies Used
-
-Data Analysis
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
-
-Dashboard
-
-- React
-- Tailwind CSS
-- Recharts
-
----
-
-📂 Project Structure
-
-EDA-Student-Performance-Analysis/
-│
+## Folder Structure
+```
+EDA_Project/
 ├── Dataset/
-│   └── student_performance.csv
-│
+│   └── student_performance.csv      # 120 rows × 8 columns
 ├── Notebook/
-│   └── EDA_Project.ipynb
-│
+│   └── EDA_Project.ipynb            # Reproducible analysis
 ├── Report/
-│   └── EDA_Report.pdf
-│
-├── Screenshots/
-│   ├── home_page.png
-│   ├── dataset_section.png
-│   ├── analysis_section.png
-│   ├── visualization_dashboard_1.png
-│   ├── visualization_dashboard_2.png
-│   ├── insights_section.png
-│   └── report_section.png
-│
+│   └── EDA_Report.pdf               # Written report
+├── frontend/                        # React dashboard
+├── backend/                         # (placeholder)
 └── README.md
+```
 
----
+## Dataset
+| Column | Type | Description |
+| --- | --- | --- |
+| Student_ID | string | Unique identifier |
+| Gender | categorical | Male / Female |
+| Study_Hours | numeric | Avg hours studied per day |
+| Attendance | numeric (%) | Class attendance |
+| Previous_Scores | numeric | Prior assessment average |
+| Sleep_Hours | numeric | Avg sleep per night |
+| Internet_Usage | numeric | Recreational internet (hrs/day) |
+| **Final_Score** | numeric | **Target** — final exam score |
 
-📁 Dataset Information
+## How to Run
 
-Dataset: Student Performance Dataset
+### Notebook
+```bash
+pip install pandas numpy matplotlib seaborn jupyter
+jupyter notebook Notebook/EDA_Project.ipynb
+```
 
-Total Records: 120
+### Dashboard
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-Total Features: 8
+## Modules
+1. **Project Overview** — definition, objective, problem, outcomes
+2. **Dataset** — preview, schema, target variable
+3. **Analysis** — types, missing values, duplicates, statistical summary
+4. **Visualization** — histogram, bar, scatter, box plot, correlation heatmap
+5. **Insights** — automatic patterns and recommendations
+6. **Report** — downloadable PDF, CSV, notebook, README
 
-Target Variable: Final_Score
+## Key Findings
+- **Study Hours** is the strongest positive predictor of Final Score.
+- **Attendance** reinforces the effect of study time.
+- **Internet Usage** beyond 4 hrs/day shows a mild negative effect.
+- **Previous Scores** remain a reliable baseline predictor.
 
-Features
+## License
+MIT — free for academic and personal use.
 
-- Student_ID
-- Gender
-- Study_Hours
-- Attendance
-- Previous_Scores
-- Sleep_Hours
-- Internet_Usage
-- Final_Score
-
----
-
-📊 Exploratory Data Analysis
-
-The project performs:
-
-- Dataset Preview
-- Data Type Analysis
-- Missing Value Detection
-- Duplicate Detection
-- Statistical Summary
-- Mean, Median, Standard Deviation
-- Minimum and Maximum Value Analysis
-
----
-
-📈 Visualizations
-
-The dashboard includes:
-
-- Histogram
-- Bar Chart
-- Scatter Plot
-- Box Plot
-- Correlation Heatmap
-
----
-
-💡 Key Insights
-
-- Study Hours have the strongest positive influence on Final Score.
-- Higher attendance is associated with improved academic performance.
-- Previous Scores are reliable indicators of future performance.
-- Excessive internet usage has a slight negative impact on final scores.
-- Consistent study habits contribute to better outcomes.
-
----
-
-📄 Project Files
-
-- EDA_Report.pdf
-- EDA_Project.ipynb
-- student_performance.csv
-- README.md
-
----
-
-🌐 Live Demo
-
-https://lovable.dev/preview/wMcJYgvm6hZAeQNyBnFOcVqXlmHijgAI
-
----
-
-🚀 Applications
-
-- Exploratory Data Analysis
-- Statistical Analysis
-- Data Visualization
-- Dashboard Development
-- Pattern Discovery
-- Insight Generation
-
----
-
-👨‍💻 Author
-
-Lokesh Melingi
-
----
-
-📜 License
-
-This project is created for educational, academic, and portfolio purposes.
+## Author
+Built as a college Data Science portfolio project.
